@@ -1,12 +1,14 @@
-import { createStore } from 'vuex';
+import {
+  createStore,
+} from 'vuex';
+import { home } from './home';
+import { history } from './history';
 
-export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+export const store = createStore({
   modules: {
+    history,
+    home,
   },
 });
+
+export default store;
