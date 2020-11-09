@@ -1,5 +1,23 @@
-# giftest
+# Тестовое задание
 
+### Стек
+* Vue
+* Vuex
+* Axios
+* Typescript
+### Функционал
+
+* При открытии страницы загружается gif при помощи запроса к API GIPHY
+* При нажатии кнопки загрузки gif загружается в localstorage
+* при переходе на страницу 'история' загружается список gif
+* реализована пагинация
+* можно удалять загруженные gif
+
+### Ссылка 
+
+https://shum89.github.io/giftest/
+
+### Локальная установка
 ## Project setup
 ```
 npm install
@@ -14,16 +32,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
