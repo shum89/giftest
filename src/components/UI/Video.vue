@@ -11,7 +11,7 @@
       autoplay
       class='video__gif'>
         <source :src='srcMp4' type="video/mp4"><source/>
-        <img :src='srcGif'/>
+        <img :src='srcGif' :alt='imageAlt'/>
       </video>
       <slot></slot>
     </div>
@@ -41,6 +41,7 @@ export default defineComponent({
     srcGif: String,
     modificator: String,
     main: String,
+    imageAlt: String,
   },
 });
 </script>

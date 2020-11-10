@@ -8,7 +8,9 @@
         main="video"
         modificator="video_history"
         :srcMp4="gif.images.original.mp4"
-        :srcGif="gif.images.original.webp">
+        :srcGif="gif.images.original.webp"
+         :imageAlt="gif.title ? gif.title : `User ${gif.username} didn't name this GIF`">
+
          <button class="history__delete-button" type="button" @click="deleteGif(gif.id)">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path class="history__delete-icon" d="M17 2h-3.5l-1-1h-5l-1

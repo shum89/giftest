@@ -4,7 +4,7 @@
     <div class="home__gif-wrap">
       <video-gif  main="video"
       modificator="video_main"
-      :srcGif="gifUrl" :srcMp4="gifMp4"/>
+      :srcGif="gifUrl" :srcMp4="gifMp4" :imageAlt='getAlt'/>
   <Button @click='handleUpload()'/>
     </div>
   </div>
@@ -26,6 +26,10 @@ export default defineComponent({
      */
     const gifUrl = computed(() => store.getters.getGif);
     const gifMp4 = computed(() => store.getters.getGifMp4);
+    const getAlt = computed(() => {
+      const alt = store.getters.getAlt ? store.getters.getAlt : `User ${store.getters.getUsername} didn't name this GIF`;
+      return alt;
+    });
     /**
      * fetch gif
      */
@@ -54,6 +58,7 @@ export default defineComponent({
       handleUpload,
       gifUrl,
       gifMp4,
+      getAlt,
     };
   },
   name: 'Home',

@@ -55,6 +55,12 @@ export const getters: GetterTree<State, State> = {
   getData(data) {
     return data.data;
   },
+  getAlt(data) {
+    return data.title;
+  },
+  getUserName(data) {
+    return data.username;
+  },
 };
 
 export const home = {
