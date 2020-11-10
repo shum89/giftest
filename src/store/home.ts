@@ -1,29 +1,29 @@
-/* eslint-disable @typescript-eslint/camelcase */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   MutationTree, ActionTree, GetterTree,
 } from 'vuex';
 import axios from 'axios';
 
-interface Original {
-  [key: string]: string;
-}
-interface Images {
-  [key: string]: Original;
-}
-interface Data {
-  [key: string]: Images;
-}
-
 interface State {
-  [key: string]: Data;
+  data: {
+    images: {
+      original: {
+        [key: string]: string;
+      };
+    };
+    title: string;
+    username: string;
+  };
 }
 export const state: State = {
   data: {
     images: {
       original: {
+        mp4: '',
+        url: '',
       },
     },
+    title: '',
+    username: '',
   },
 };
 
@@ -56,10 +56,10 @@ export const getters: GetterTree<State, State> = {
     return data.data;
   },
   getAlt(data) {
-    return data.title;
+    return data.data.title;
   },
   getUserName(data) {
-    return data.username;
+    return data.data.username;
   },
 };
 
