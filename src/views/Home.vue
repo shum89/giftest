@@ -27,7 +27,7 @@ export default defineComponent({
     const gifUrl = computed(() => store.getters.getGif);
     const gifMp4 = computed(() => store.getters.getGifMp4);
     const getAlt = computed(() => {
-      const alt = store.getters.getAlt ? store.getters.getAlt : `User ${store.getters.getUsername} didn't name this GIF`;
+      const alt = store.getters.getAlt ? store.getters.getAlt : `User ${store.getters.getUserName} didn't name this GIF`;
       return alt;
     });
     /**
